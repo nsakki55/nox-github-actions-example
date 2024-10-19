@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from unittest.mock import MagicMock
 
-from src.train_lr import Dataset, get_train_test_data, train_model, validate_model
+from train_lr import Dataset, get_train_test_data, train_model, validate_model
 
 
 @pytest.fixture
