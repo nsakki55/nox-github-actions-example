@@ -61,11 +61,16 @@ def validate_model(model: LogisticRegression, dataset: Dataset) -> dict[str, flo
 
 
 def main():
+    logger.info("Start training logistic regression")
     data, target = get_iris_data()
     train_dataset, test_dataset = get_train_test_data(X=data, y=target)
     model = train_model(train_dataset=train_dataset)
     train_metrics = validate_model(model=model, dataset=train_dataset)
     test_metrics = validate_model(model=model, dataset=test_dataset)
+
+    logger.info(
+        f"Finished training logistic regression. {train_metrics=}, {test_metrics}"
+    )
 
 
 if __name__ == "__main__":

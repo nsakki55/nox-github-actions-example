@@ -4,6 +4,7 @@ import nox
 @nox.session(venv_backend="uv", python=["3.12"], tags=["lint"])
 def lint(session):
     session.install("ruff")
+    session.run("uv", "run", "ruff", "check")
     session.run("uv", "run", "ruff", "format")
 
 
