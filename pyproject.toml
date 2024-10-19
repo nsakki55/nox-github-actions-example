@@ -1,0 +1,28 @@
+[project]
+name = "nox-sandbox"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "scikit-learn>=1.5.2",
+    "coloredlogs>=15.0.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+    "mypy>=1.12.0",
+]
+
+
+[tool.mypy]
+python_version = "3.12"
+no_strict_optional = true
+ignore_missing_imports = true
+check_untyped_defs = true
+exclude = ['tests']
