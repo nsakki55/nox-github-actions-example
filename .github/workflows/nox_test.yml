@@ -17,6 +17,6 @@ jobs:
           pip install --upgrade pip
           pip install uv
           uv tool install nox
-      - name: Run Tox
+      - name: Run Nox
         run: |
           uvx nox

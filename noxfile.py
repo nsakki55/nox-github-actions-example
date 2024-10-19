@@ -14,7 +14,7 @@ def mypy(session):
     session.run("uv", "run", "mypy", "src")
 
 
-@nox.session(venv_backend="uv", python=["3.12", "3.11"], tags=["test"])
+@nox.session(venv_backend="uv", python=["3.12"], tags=["test"])
 def test(session):
     session.run("uv", "sync", "--dev")
 

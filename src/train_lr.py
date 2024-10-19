@@ -3,7 +3,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from sklearn.metrics import accuracy_score
-from src.logging_util import get_logger
+from logging_util import get_logger
 import numpy as np
 
 logger = get_logger(__name__)
